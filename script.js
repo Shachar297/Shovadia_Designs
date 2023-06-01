@@ -1,9 +1,12 @@
 const
     rightMergedElements = document.querySelectorAll(".right-margin"),
-    leftMergedElements = document.querySelectorAll(".left-margin");
+    leftMergedElements = document.querySelectorAll(".left-margin"),
+    sendMailButton = document.getElementById("get-started-btn"),
+    serverUrl = "https://187f-2a06-c701-4ed4-7200-38d8-5132-555-23ab.ngrok-free.app/mail/";
 
 function init() {
     setListeners();
+    initMail();
 }
 
 function setListeners() {
@@ -29,6 +32,18 @@ function setListeners() {
             setTimeout(() => {
                 e.style.transform = `scale(1, 1)`;
             }, 2000)
+        })
+    })
+}
+
+function initMail() {
+    sendMailButton.addEventListener('click', () => {
+        fetch(serverUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({hasMail: false, mail: "", subject: "", message: ""})
         })
     })
 }
