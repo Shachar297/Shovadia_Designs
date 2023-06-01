@@ -13,25 +13,19 @@ function setListeners() {
     rightMergedElements.forEach(element => {
         element.addEventListener('click', (e) => {
             e = e.target;
-            console.log(e)
-            e.style.transform = `scale(1.8, 1.8)`;
-
+            e.style.transform = `scale(2.5, 2.5)`;
             setTimeout(() => {
                 e.style.transform = `scale(1, 1)`;
-
-
-            }, 800)
+            }, 3500)
         })
     })
     leftMergedElements.forEach(element => {
         element.addEventListener('click', (e) => {
             e = e.target;
-            console.log(e)
-            e.style.transform = `scale(2, 2)`;
-
+            e.style.transform = `scale(2.5, 2.5)`;
             setTimeout(() => {
                 e.style.transform = `scale(1, 1)`;
-            }, 2000)
+            }, 3500)
         })
     })
 }
@@ -41,9 +35,9 @@ function initMail() {
         fetch(serverUrl, {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify({hasMail: false, mail: "", subject: "", message: ""})
+            body: JSON.stringify({ hasMail: false, mail: "", subject: "", message: "" })
         })
     })
 }

@@ -21,10 +21,6 @@ function sendMail(config) {
             text: generateAutoMailMessage(config).text
         };
 
-    console.log({
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASSWORD
-    })
     return new Promise((resolve, reject) => {
 
         transporter.sendMail(mailOptions, function (error, info) {

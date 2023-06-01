@@ -33,6 +33,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 
   img.right-margin:hover{
     margin-right: -10vw !important;
+    z-index: 0;
 
 }
   img.left-margin:hover{
@@ -101,6 +102,11 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     width: 400px;
     margin-bottom: 20px;
   }
+
+  .service img:not(:hover) {
+    transform: scale(1,1) !important;
+    transition: 0.8s !important;
+  }
   
   .service h3 {
     font-size: 24px;
@@ -149,7 +155,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     border-radius: 4px;
   }
   
-  form button {
+  form button, .load-more {
     background-color: #333;
     color: #fff;
     border: none;
@@ -157,7 +163,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     cursor: pointer;
   }
 
-  .cta-button:hover{
+  .cta-button:hover, .load-more:hover{
     transition: 0.7s;
     color: black;
     background-color: greenyellow;
@@ -169,7 +175,21 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     box-shadow: rgba(65, 32, 234, 0.165) 0.1vh 0.4vh 0.5vh 0.2vh ;
   }
 
-  .cta-button:not(:hover) {
+  .cta-button:not(:hover), .load-more:not(:hover) {
     transition: 0.5s;
 
+  }
+
+  select {
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    width: 8vw;
+    height: 3.5vh;
+    text-align: center;
+
+  }
+
+  select:hover{
+    transition: 0.5s;
+      background-color: #ccc;
   }
