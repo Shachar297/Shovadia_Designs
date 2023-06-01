@@ -156,3 +156,20 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     padding: 10px 20px;
     cursor: pointer;
   }
+
+  .cta-button:hover{
+    transition: 0.7s;
+    color: black;
+    background-color: greenyellow;
+    padding-right: 5vh !important;
+    padding-left: 5vh !important;
+    padding-top: 1.5vh !important;
+    padding-bottom: 1.5vh !important;
+    border: solid rgba(0, 0, 0, 0.094) 1px;
+    box-shadow: rgba(65, 32, 234, 0.165) 0.1vh 0.4vh 0.5vh 0.2vh ;
+  }
+
+  .cta-button:not(:hover) {
+    transition: 0.5s;
+
+  }
