@@ -21,7 +21,29 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     color: #fff;
   }
 
+  #portfolio img:hover{
+    transition: 0.8s;
+    transform: scale(1.4,1.4);
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 500;
+  }
   
+
+  img.right-margin:hover{
+    margin-right: -10vw !important;
+
+}
+  img.left-margin:hover{
+    margin-right: 10vw !important;
+
+}
+
+#portfolio img:not(:hover){
+    transition: 1s;
+  }
+
 
   .nav-links {
     margin-left: 20vw !important;
