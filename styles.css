@@ -155,7 +155,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     border-radius: 4px;
   }
   
-  form button, .load-more {
+  form button, .load-more , #open-modal{
     background-color: #333;
     color: #fff;
     border: none;
@@ -163,7 +163,17 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     cursor: pointer;
   }
 
-  .cta-button:hover, .load-more:hover{
+#open-modal{
+  width: 12vw;
+  height: 4.5vh;
+  border-radius: 4px;
+  margin-top: 5vh;
+}
+
+#open-modal:hover{
+  width: 15vw;
+}
+  .cta-button:hover, .load-more:hover, #open-modal:hover{
     transition: 0.7s;
     color: black;
     background-color: greenyellow;
@@ -175,7 +185,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     box-shadow: rgba(65, 32, 234, 0.165) 0.1vh 0.4vh 0.5vh 0.2vh ;
   }
 
-  .cta-button:not(:hover), .load-more:not(:hover) {
+  .cta-button:not(:hover), .load-more:not(:hover), #open-modal:not(:hover) {
     transition: 0.5s;
 
   }

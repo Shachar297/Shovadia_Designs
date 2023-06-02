@@ -12,6 +12,7 @@ function init() {
     initMail();
     // setSelectValue("6");
     filterImageResults();
+    initModal();
 }
 
 function setListeners() {
@@ -77,5 +78,9 @@ function setSelectValue(value) {
             children[i].selected = true;;
         }
     }
+}
+
+function initModal() {
+
 }
 init();
