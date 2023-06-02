@@ -44,7 +44,7 @@
         </div>
         <div class="service">
             <img src="src/Fiverr_logo8.png" width="500" alt="Service 1">
-            <img src="src/Fiverr_logo11.png"  alt="Service 1">
+            <img src="src/Fiverr_logo11.png" alt="Service 1">
             <h3>Logo Redesign</h3>
             <p>Give your existing logo a fresh and modern look.</p>
         </div>
@@ -57,13 +57,14 @@
 
     <section id="portfolio">
         <h2>Portfolio</h2>
-<label for="filter-images">
-Number of images
-    <select name="filter-images" id="filter-images">
-        <option value="6-10">10</option>
-        <option value="10">20</option>
-    </select>
-</label>
+        <label for="filter-images">
+            Number of images
+            <select name="filter-images" id="filter-images" value="6">
+                <option value="6" >6</option>
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+            </select>
+        </label>
 
         <div class="portfolio-item">
             <img src="src/Fiverr_images17.png" alt="Portfolio 1" class="right-margin">
@@ -85,7 +86,7 @@ Number of images
             <img src="src/Fiverr_logo14.png" alt="Portfolio 3" class="right-margin">
             <img src="src/Fiverr_logo15.png" alt="Portfolio 3" class="left-margin">
         </div>
-        <button class="load-more">Load More</button>
+        <button class="load-more" id="load-more">Load More</button>
     </section>
 
     <section id="contact">
