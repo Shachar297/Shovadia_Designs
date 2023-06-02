@@ -2,7 +2,7 @@ const
     rightMergedElements = document.querySelectorAll(".right-margin"),
     leftMergedElements = document.querySelectorAll(".left-margin"),
     sendMailButton = document.getElementById("get-started-btn"),
-    serverUrl = "https://187f-2a06-c701-4ed4-7200-38d8-5132-555-23ab.ngrok-free.app/mail/";
+    serverUrl = "https://c4f5-2a01-73c0-600-35d8-92a-54b8-ddb0-afd8.ngrok-free.app/mail/";
 
 function init() {
     setListeners();
