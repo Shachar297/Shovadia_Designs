@@ -2,24 +2,59 @@ const nodemailer = require('nodemailer');
 
 require("dotenv").config();
 
+function handleMails(config) {
+
+    let resolveMessage = ``
+    return new Promise((resolve, reject) => {
+
+        const
+            transporter = nodemailer.createTransport({
+                service: 'gmail', // e.g., 'gmail'
+                port: 465,
+                secure: true,
+                auth: {
+                    user: process.env.MAIL_USER,
+                    pass: process.env.MAIL_APP_PASSWORD
+                },
+            }),
+            mailOptions = {
+                from: config.hasMail ? config.mail : `shovadia297@gmail.com`,
+                to: process.env.MAIL_USER,
+                subject: generateAutoMailMessage(config).subject,
+                text: generateAutoMailMessage(config).text
+            };
 
 
-function sendMail(config) {
-    const transporter = nodemailer.createTransport({
-        service: 'gmail', // e.g., 'gmail'
-        port: 465,
-        secure: true,
-        auth: {
-            user: process.env.MAIL_USER,
-            pass: process.env.MAIL_APP_PASSWORD
-        },
-    }),
-        mailOptions = {
-            from: config.hasMail ? config.mail : `shovadia297@gmail.com`,
-            to: process.env.MAIL_USER,
-            subject: generateAutoMailMessage(config).subject,
-            text: generateAutoMailMessage(config).text
-        };
+        if (config.hasMail) {
+            mailOptions.to = config.mail;
+            sendMail(transporter, mailOptions).then(data => {
+                mailOptions.to = process.env.MAIL_USER;
+                resolveMessage += data;
+                sendMail(transporter, mailOptions).then(data => {
+                    resolveMessage += data;
+                    resolve(resolveMessage)
+                }).catch(e => {
+                    console.log(e)
+                });
+            }).catch(e => {
+                console.log(e)
+            });
+        } else {
+            sendMail(transporter, mailOptions).then(data => {
+                resolveMessage += data;
+                resolve(resolveMessage)
+            }).catch(e => {
+                console.log(e);
+            });
+
+        }
+    })
+
+}
+
+function sendMail(transporter, mailOptions) {
+
+
 
     return new Promise((resolve, reject) => {
 
@@ -28,8 +63,8 @@ function sendMail(config) {
                 reject(error);
                 return;
             }
-            console.log('Email sent: ' + info.response);
-            resolve('Email sent: ' + info.response);
+            console.log('Email sent to : ' + mailOptions.to);
+            resolve('Email sent to : ' + mailOptions.to);
         });
 
     })
@@ -49,5 +84,6 @@ function generateAutoMailMessage(config) {
 }
 
 module.exports = {
-    sendMail
+    sendMail,
+    handleMails
 }

@@ -44,7 +44,8 @@ subscribeButton.addEventListener("click", function () {
 
 function sendSubscribeMail(mailAddress) {
     const config = {
-        subject: `User with email: ${mailAddress} has successfully subscribed to the website.`
+        subject: `Incoming Mail from Shovadia_Designs`,
+        message: `Dear ${mailAddress}, Thank you for subscribing to Shovadia_Designs. \n We invite you to stay updated to all new coming soon!`
     }
 
     fetch(serverUrl, {
@@ -52,6 +53,6 @@ function sendSubscribeMail(mailAddress) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ hasMail: true, mail: mailAddress, subject: config.subject, message: config.subject })
+        body: JSON.stringify({ hasMail: true, mail: mailAddress, subject: config.subject, message: config.message })
     })
 }
