@@ -299,6 +299,9 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     .Site-name {
       display: none !important;
     }
+    #open-modal {
+      width: 18vw !important;
+    }
 }
 @media only screen and (min-device-width: 220פס) and (max-device-width: 320פס) {
     /* Even Smaller devices */
@@ -311,5 +314,9 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     }
     .Site-name {
       display: none !important;
+    }
+
+    #open-modal {
+      width: 18vw !important;
     }
 }
