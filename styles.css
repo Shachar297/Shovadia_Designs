@@ -230,6 +230,17 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     text-align: center;
   }
 
+.package:hover{
+  transform: scale(1.2,1.2);
+  transition: 1s;
+  background-color: greenyellow;
+}
+
+.package:not(:hover) {
+  transition: 1.5s;
+}
+
+
   .package h2 {
     color: #333;
     font-size: 24px;
