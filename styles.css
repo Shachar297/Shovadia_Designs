@@ -356,6 +356,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 #basic-img, #standard-img , #premium-img {
   left: 85vw;
 }
+}
 @media only screen and (min-device-width: 220פס) and (max-device-width: 320פס) {
     /* Even Smaller devices */
     .nav-links li {
@@ -384,8 +385,29 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
       font-size: 1.6rem !important;
     }
 
+ 
+    .package {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 75vw !important;
+      height: 20vh !important;
+      font-size: 1.6rem !important;
+    }
     #basic-img {
-      top: 35vh !important;
+      top: 45vh !important;
+    }
+    
+    #standard-img {
+      top: 68vh;
+    }
+    
+    #premium-img {
+      top: 92vh;
+    }
+    
+    #basic-img, #standard-img , #premium-img {
+      left: 85vw;
     }
 }
 
