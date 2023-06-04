@@ -299,15 +299,16 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     .Site-name {
       display: none !important;
     }
-    #open-modal {
+    #open-modal, .cta-button {
       width: 18vw !important;
+      height: 6vh !important;
+      font-size: 1.3rem;
     }
-
-    button{ 
-      width: 18vw !important;
-      height: 7vh !important;
-      font-size: 1.5rem !important;
-    }
+.package {
+  width: 75vw;
+  height: 35vh;
+  font-size: 1.3rem;
+}
 }
 @media only screen and (min-device-width: 220פס) and (max-device-width: 320פס) {
     /* Even Smaller devices */
@@ -328,7 +329,11 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
       font-size: 1.3rem;
     }
 
- 
+ .package {
+  width: 75vw;
+  height: 35vh;
+  font-size: 1.3rem;
+ }
 
     
 }
