@@ -22,6 +22,12 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
 
   @media screen and (max-width: 768px) {
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
     .nav-links {
       margin-left: 10vw;
     }
@@ -33,11 +39,6 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
       padding-left: 2vh;
     }
   
-    .menu-icon {
-      display: block;
-      font-size: 24px;
-      cursor: pointer;
-    }
   
     #menu-toggle {
       display: none;
