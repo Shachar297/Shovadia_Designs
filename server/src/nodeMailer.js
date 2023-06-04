@@ -71,7 +71,7 @@ function sendMail(transporter, mailOptions) {
 }
 
 function generateAutoMailMessage(config) {
-    if (config.hasMail) {
+    if (config.hasMail || config.subject != "") {
         return {
             subject: config.subject,
             text: config.message

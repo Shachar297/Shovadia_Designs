@@ -37,19 +37,13 @@ function setListeners() {
 
 function initMail() {
     sendMailButton.addEventListener('click', () => {
-        fetch(serverUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ hasMail: false, mail: "", subject: "", message: "" })
-        })
+        sendMail(subject = "");
     })
 }
 
 function filterImageResults() {
 
-    
+
     selectElement.addEventListener("change", function () {
         var value = parseInt(this.value);
         for (var i = 0; i < images.length; i++) {
@@ -80,5 +74,18 @@ function setSelectValue(value) {
 }
 
 
+function onUserEnterSendMail() {
+    let subject = `User has entered the website.`
+    sendMail(subject);
+}
 
+function sendMail(subject = "") {
+    fetch(serverUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ hasMail: false, mail: "", subject: subject, message: subject })
+    })
+}
 init();
