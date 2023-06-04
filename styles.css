@@ -322,15 +322,13 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
       display: none !important;
     }
 
-    #open-modal {
+    #open-modal, .cta-button {
       width: 18vw !important;
+      height: 6vh !important;
+      font-size: 1.3rem;
     }
 
-    button{ 
-      width: 18vw !important;
-      height: 7vh !important;
-      font-size: 1.5rem !important;
-    }
+ 
 
     
 }
