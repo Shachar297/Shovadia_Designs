@@ -354,7 +354,8 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 }
 
 #basic-img, #standard-img , #premium-img {
-  left: 85vw;
+  width: 5vh !important;
+  left: 81vw;
 }
 }
 @media only screen and (min-device-width: 220פס) and (max-device-width: 320פס) {
@@ -407,7 +408,8 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     }
     
     #basic-img, #standard-img , #premium-img {
-      left: 85vw;
+      width: 5vh !important;
+  left: 81vw;
     }
 }
 
