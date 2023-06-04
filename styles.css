@@ -262,6 +262,35 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
 
 
+
+  #basic-img {
+    width: 45px;
+    background: grey;
+    border-radius: 55%;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 24.5vw;
+    top: 61vh;
+  }
+  #standard-img {
+    width: 45px;
+    background: grey;
+    border-radius: 55%;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 56.5vw;
+    top: 61vh;
+  }
+  #premium-img {
+    width: 55px;
+    background: grey;
+    border-radius: 55%;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 88vw;
+    top: 61vh;
+  }
+
   @media (max-width: 800px) {
     /* Smaller Resolution Desktops and Laptops */
     header {
@@ -312,6 +341,20 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   height: 20vh !important;
   font-size: 1.6rem !important;
 }
+#basic-img {
+  top: 45vh !important;
+}
+
+#standard-img {
+  top: 68vh;
+}
+
+#premium-img {
+  top: 92vh;
+}
+
+#basic-img, #standard-img , #premium-img {
+  left: 85vw;
 }
 @media only screen and (min-device-width: 220פס) and (max-device-width: 320פס) {
     /* Even Smaller devices */
@@ -341,5 +384,9 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
       font-size: 1.6rem !important;
     }
 
-    
+    #basic-img {
+      top: 35vh !important;
+    }
 }
+
+
