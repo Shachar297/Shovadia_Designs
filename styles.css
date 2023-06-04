@@ -300,3 +300,16 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
       display: none !important;
     }
 }
+@media only screen and (min-device-width: 220פס) and (max-device-width: 320פס) {
+    /* Even Smaller devices */
+    .nav-links li {
+      margin-left: 0;
+      font-size: 25px;
+      padding-left: 1vh;
+      padding-right: 1vh;
+      
+    }
+    .Site-name {
+      display: none !important;
+    }
+}
