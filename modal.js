@@ -5,10 +5,11 @@ var subscribeButton = document.getElementById("subscribe-button");
 
 // Delay in milliseconds before opening the modal
 var modalDelay = 5000; // 5 seconds
-
+var isModalOpenedBefore = false;
 // Function to open the modal
 function openModal() {
     modal.style.display = "block";
+    isModalOpenedBefore = true;
 }
 
 // Function to close the modal
@@ -26,7 +27,10 @@ window.addEventListener("click", function (event) {
 });
 
 // Automatically open the modal after the specified delay
-setTimeout(openModal, modalDelay);
+setTimeout(() => {
+    if(isModalOpenedBefore) return;
+    openModal()
+}, modalDelay);
 
 // Subscribe button functionality
 subscribeButton.addEventListener("click", function () {

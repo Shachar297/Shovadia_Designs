@@ -205,4 +205,57 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
 
 
-  
+  #packages {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4vh;
+    border-top: solid rgba(0, 0, 0, 0.25) 1px;
+    border-bottom: solid rgba(0, 0, 0, 0.25) 1px;
+  }
+
+  .package {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .package h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .package ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .package ul li {
+    margin-bottom: 5px;
+  }
+
+  .package .price {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .package .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5f6d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .package .btn:hover {
+    background-color: #ff3b4a;
+  }
