@@ -1,4 +1,6 @@
-const nodemailer = require('nodemailer');
+const 
+    nodemailer = require('nodemailer'),
+    sqlModule = require("./sql");
 
 require("dotenv").config();
 

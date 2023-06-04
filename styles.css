@@ -419,3 +419,6 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 }
 
 
+img {
+  pointer-events: none !important;
+}

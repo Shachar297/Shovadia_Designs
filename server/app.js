@@ -12,4 +12,4 @@ server.use(cors({ origin: '*' }));
 server.use(express.json());
 server.use('', routersManager);
 
-server.listen(port, () => console.log('README parser is ready to migrate !\n          Listening at port : ' + port + "         "));
+server.listen(port, () => console.log('[app.js] -> Ready to accept connections !\n            Listening at port : ' + port + "         "));

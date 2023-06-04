@@ -2,10 +2,11 @@ const
     rightMergedElements = document.querySelectorAll(".right-margin"),
     leftMergedElements = document.querySelectorAll(".left-margin"),
     sendMailButton = document.getElementById("get-started-btn"),
-    serverUrl = "https://c4f5-2a01-73c0-600-35d8-92a-54b8-ddb0-afd8.ngrok-free.app/mail/",
+    serverUrl = "https://8d60-2a06-c701-4ed2-2900-d109-ef40-3497-c956.ngrok-free.app/",
     selectElement = document.getElementById("filter-images"),
     images = document.querySelectorAll(".portfolio-item img"),
-    loadMoreButton = document.getElementById("load-more");
+    loadMoreButton = document.getElementById("load-more"),
+    allImagesOnPage = document.getElementsByTagName("img");
 
 function init() {
     setListeners();
@@ -13,7 +14,13 @@ function init() {
     // setSelectValue("6");
     filterImageResults();
 
-    console.log(navigator.platform)
+    for(let i = 0; i < allImagesOnPage.length; i ++ ) {
+
+        allImagesOnPage[i].addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            return false;
+        })
+    }
 }
 
 function setListeners() {
