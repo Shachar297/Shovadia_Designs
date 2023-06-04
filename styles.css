@@ -319,4 +319,12 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     #open-modal {
       width: 18vw !important;
     }
+
+    button{ 
+      width: 18vw !important;
+      height: 7vh !important;
+      font-size: 1.5rem !important;
+    }
+
+    
 }
