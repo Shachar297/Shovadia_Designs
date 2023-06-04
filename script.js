@@ -12,6 +12,8 @@ function init() {
     initMail();
     // setSelectValue("6");
     filterImageResults();
+
+    console.log(navigator.platform)
 }
 
 function setListeners() {

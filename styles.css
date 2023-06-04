@@ -305,9 +305,12 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
       font-size: 1.3rem;
     }
 .package {
-  width: 75vw;
-  height: 35vh;
-  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 75vw !important;
+  height: 20vh !important;
+  font-size: 1.6rem !important;
 }
 }
 @media only screen and (min-device-width: 220פס) and (max-device-width: 320פס) {
@@ -329,11 +332,14 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
       font-size: 1.3rem;
     }
 
- .package {
-  width: 75vw;
-  height: 35vh;
-  font-size: 1.3rem;
- }
+    .package {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 75vw !important;
+      height: 20vh !important;
+      font-size: 1.6rem !important;
+    }
 
     
 }
