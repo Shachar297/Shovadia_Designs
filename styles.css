@@ -276,8 +276,15 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 }
 @media (max-width: 450px) {
     /* Even Smaller devices */
-    header {
-      background-color: pink;
+    .nav-links li {
+      margin-left: 0;
+      font-size: 25px;
+      padding-left: 1vh;
+      padding-right: 1vh;
+      
+    }
+    .Site-name {
+      display: none !important;
     }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
