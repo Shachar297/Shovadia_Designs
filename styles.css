@@ -58,9 +58,14 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     padding-left: 4vh;
   }
   
+
   .nav-links li a {
     color: #fff;
     text-decoration: none;
+  }
+  .nav-links li a:hover {
+    color: greenyellow;
+    transition: 0.5s;
   }
   
   /* Hero section */
