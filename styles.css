@@ -21,34 +21,6 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     color: #fff;
   }
 
-  @media only screen and (max-width: 600px) {
-
-    header {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-    .nav-links {
-      margin-left: 10vw;
-    }
-  
-    .nav-links li {
-      display: inline;
-      margin-left: 10px;
-      padding-right: 2vh;
-      padding-left: 2vh;
-    }
-  
-  
-    #menu-toggle {
-      display: none;
-    }
-  
-    #menu-toggle:checked ~ .nav-links {
-      display: flex;
-    }
-  }
-  
 
   #portfolio img:hover{
     transition: 0.8s;
@@ -288,3 +260,36 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   .package .btn:hover {
     background-color: #ff3b4a;
   }
+
+
+  @media (max-width: 800px) {
+    /* Smaller Resolution Desktops and Laptops */
+    header {
+      background-color: pink;
+    }
+}
+@media (max-width: 650px) {
+    /* Smaller devices */
+    header {
+      background-color: pink;
+    }
+}
+@media (max-width: 450px) {
+    /* Even Smaller devices */
+    header {
+      background-color: pink;
+    }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Even Smaller devices */
+    .nav-links li {
+      margin-left: 0;
+      font-size: 25px;
+      padding-left: 1vh;
+      padding-right: 1vh;
+      
+    }
+    .Site-name {
+      display: none !important;
+    }
+}
