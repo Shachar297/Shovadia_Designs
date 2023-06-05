@@ -9,6 +9,7 @@ const
         "src/Fiverr_logo6.png",
         "src/Fiverr_image01.png",
         "src/EasyLife.png",
+        "src/Fiverr_logos21.png"
     ];
 let index = -1;
 setInterval(() => { rotateImages() }, 2000);
