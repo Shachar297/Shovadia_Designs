@@ -2,17 +2,20 @@ const
     header = document.getElementById("header"),
     navLinks = document.getElementById("nav-links"),
     headerImages = [
+        "src/Shovadia.png",
         "src/Fiverr_logo13.png",
         "src/Suta.jpg",
         "src/Fiverr_logo15.png",
         "src/Fiverr_logo10.png",
+        "src/Shovadia.png",
         "src/Fiverr_logo6.png",
         "src/Fiverr_image01.png",
         "src/EasyLife.png",
-        "src/Fiverr_logos21.png"
+        "src/Fiverr_logos21.png",
+        "src/Get Fixed.png",
     ];
 let index = -1;
-setInterval(() => { rotateImages() }, 5500);
+setInterval(() => { rotateImages() }, 1500);
 
 function initHeaderImages() {
 }
@@ -26,35 +29,36 @@ function rotateImages() {
     } else {
         index++;
     }
-    // if(index > headerImages.length)
     header.classList.remove('fade-in');
     header.classList.add('fade-out');
 
     setTimeout(function () {
         header.style.backgroundImage = 'url(' + headerImages[index] + ')';
 
-        setHeaderStyles(index);
+        setHeaderStyles(headerImages[index], index);
         header.classList.remove('fade-out');
         header.classList.add('fade-in');
     }, 250);
     return index;
 }
 
-function setHeaderStyles(index) {
+function setHeaderStyles(image, index) {
     if (index == 6 || index == 2) {
         resetDefaults();
     } else if (index == 1) {
         header.style.backgroundSize = "60% 85%"
         header.style.backgroundColor = "#db534f"
         navLinks.style.marginLeft = "5vw !important"
-    }else if (index == 7) {
+    } else if (index == 7) {
         resetDefaults();
-    }
-    else {
+    } else if (image == "src/Shovadia.png") {
+        header.style.backgroundSize = "60% 85%"
+        // header.style.backgroundColor = "#db534f"
+        // navLinks.style.marginLeft = "5vw !important"
+    } else {
         resetDefaults();
     }
     if (index == 5) {
-        console.log("---")
         navLinks.classList.add("blacked");
     } else {
         navLinks.classList.remove("blacked");

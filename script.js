@@ -16,10 +16,10 @@ function init() {
 
     for(let i = 0; i < allImagesOnPage.length; i ++ ) {
 
-        allImagesOnPage[i].addEventListener("contextmenu", (e) => {
-            e.preventDefault();
-            return false;
-        })
+        // allImagesOnPage[i].addEventListener("contextmenu", (e) => {
+        //     e.preventDefault();
+        //     return false;
+        // })
     }
 }
 
