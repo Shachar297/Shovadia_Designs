@@ -26,14 +26,14 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
   #header.fade-in {
   background-color: black;
-  transition: 0.5s;
+  transition: 1s;
     opacity: 1;
 }
 
 #header.fade-out {
   background-color: black;
   opacity: 0;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 
   #portfolio img:hover{

@@ -10,7 +10,7 @@ const
         "src/EasyLife.png",
     ];
 let index = -1;
-setInterval(() => { rotateImages() }, 2000);
+setInterval(() => { rotateImages() }, 6000);
 
 function initHeaderImages() {
 }
