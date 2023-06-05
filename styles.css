@@ -4,6 +4,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   html{
@@ -16,11 +17,24 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   
   /* Header */
   header {
-    background-color: #333;
     padding: 20px;
     color: #fff;
+    height: 60vh;
+    background-image: url("src/Fiverrr_image3.png"); /* fallback */
+    background-size: 70%;
+    background-position: center;
   }
+  #header.fade-in {
+  background-color: black;
+  transition: 0.5s;
+    opacity: 1;
+}
 
+#header.fade-out {
+  background-color: black;
+  opacity: 0;
+    transition: 0.5s;
+}
 
   #portfolio img:hover{
     transition: 0.8s;
@@ -48,14 +62,28 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 
 
   .nav-links {
-    margin-left: 20vw !important;
+    z-index: 222;
+    margin-left: -2vw !important;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    border-right: solid rgba(255, 255, 255, 0.371) 1px !important;
+    width: fit-content !important;
+    border-radius: 5vh;
   }
   
+.blacked, .blacked * {
+  color: black !important;
+}
+
   .nav-links li {
     display: inline;
     margin-left: 20px;
     padding-right: 4vh;
     padding-left: 4vh;
+    font-size: 1.3rem;
+    margin-top: 4vh;
   }
   
 
