@@ -3,6 +3,7 @@ const
     navLinks = document.getElementById("nav-links"),
     headerImages = [
         "src/Fiverr_logo13.png",
+        "src/Suta.jpg",
         "src/Fiverr_logo15.png",
         "src/Fiverr_logo10.png",
         "src/Fiverr_logo6.png",
@@ -10,7 +11,7 @@ const
         "src/EasyLife.png",
     ];
 let index = -1;
-setInterval(() => { rotateImages() }, 6000);
+setInterval(() => { rotateImages() }, 2000);
 
 function initHeaderImages() {
 }
@@ -39,12 +40,19 @@ function rotateImages() {
 }
 
 function setHeaderStyles(index) {
-    if (index == 5 || index == 2) {
-        header.style.backgroundSize = "65%"
-    }else {
-        header.style.backgroundSize = "75%"
+    if (index == 6 || index == 2) {
+        resetDefaults();
+    } else if (index == 1) {
+        header.style.backgroundSize = "60% 85%"
+        header.style.backgroundColor = "#db534f"
+        navLinks.style.marginLeft = "5vw !important"
+    }else if (index == 7) {
+        resetDefaults();
     }
-    if (index == 4) {
+    else {
+        resetDefaults();
+    }
+    if (index == 5) {
         console.log("---")
         navLinks.classList.add("blacked");
     } else {
@@ -52,4 +60,9 @@ function setHeaderStyles(index) {
     }
 }
 
+function resetDefaults() {
+    header.style.backgroundSize = "90% 100%"
+    navLinks.style.marginLeft = "2vw"
+    header.style.backgroundColor = "black";
+}
 initHeaderImages();

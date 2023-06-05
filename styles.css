@@ -21,8 +21,9 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     color: #fff;
     height: 60vh;
     background-image: url("src/Fiverrr_image3.png"); /* fallback */
-    background-size: 70%;
+    background-size: 90% 100%;
     background-position: center;
+    background-repeat: no-repeat;
   }
   #header.fade-in {
   background-color: black;
@@ -63,18 +64,18 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 
   .nav-links {
     z-index: 222;
-    margin-left: -2vw !important;
+    margin-left: 2vw !important;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
     height: 60vh;
-    border-right: solid rgba(255, 255, 255, 0.371) 1px !important;
     width: fit-content !important;
     border-radius: 5vh;
   }
   
 .blacked, .blacked * {
   color: black !important;
+  font-weight: bolder;
 }
 
   .nav-links li {
@@ -92,8 +93,10 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     text-decoration: none;
   }
   .nav-links li a:hover {
-    color: greenyellow;
+    color: white !important;
     transition: 0.5s;
+    box-shadow: rgba(172, 255, 47, 0.322) 0.1vh 0.5vh 0.7vh 0.1vh ;
+    background-color: #333;
   }
   
   /* Hero section */
