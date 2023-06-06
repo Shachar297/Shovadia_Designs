@@ -6,7 +6,8 @@ const
     selectElement = document.getElementById("filter-images"),
     images = document.querySelectorAll(".portfolio-item img"),
     loadMoreButton = document.getElementById("load-more"),
-    allImagesOnPage = document.getElementsByTagName("img");
+    allImagesOnPage = document.getElementsByTagName("img"),
+    packageInfo = document.querySelectorAll(".package-info-svg");
 
 function init() {
     setListeners();
@@ -17,6 +18,7 @@ function init() {
     document.getElementById("lang").selectedIndex = 0;
     const languagePicker = document.getElementById("lang");
     setLanguage(languagePicker);
+    initPackageInfo();
 }
 
 function setListeners() {
@@ -94,5 +96,40 @@ function sendMail(subject = "") {
     })
 }
 
+function initPackageInfo() {
+    for (let i = 0; i < packageInfo.length; i++) {
+        packageInfo[i].addEventListener("click", (e) => {
+            const parentElement = e.target.closest("div.package")
+            createInoPackageElement(e.target, parentElement);
+        })
+    }
+}
+
+function createInoPackageElement(clickedEvent, parentElement) {
+    console.log(clickedEvent, parentElement)
+    let     
+        text = ``,
+        element = document.createElement("p");
+    switch (clickedEvent.getAttribute("name")) {
+        case "premium":
+            text = `
+                When purchasing the premium package, We provide 4 logo designs or any other combination of designs (logos, art design, product design...)
+                Each design has 2 revision!
+                A revision is practically a fixed alignment as for the customer's needs.
+                `
+            break;
+
+        case "standard":
+            break;
+
+        case "basic":
+            break;
+
+    }
+    element.classList.add("package-description");
+    element.innerHTML = text;
+    parentElement.appendChild(element);
+    console.log(document.getElementsByClassName("package-description")[0]);
+}
 
 init();
