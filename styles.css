@@ -541,9 +541,6 @@ header {
 }
 
 
-img {
-  /* pointer-events: none !important; */
-}
 .about select{
 margin-right: auto !important;
 margin-left: auto !important;
