@@ -196,11 +196,14 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   
   .portfolio-item {
     margin-bottom: 40px;
+
   }
   
   .portfolio-item img {
-    width: 300px;
+    width: 400px;
     border-radius: 4px;
+    margin-right: 2vw;
+    margin-left: 2vw;
   }
   
   /* Contact section */
