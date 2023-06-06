@@ -46,10 +46,10 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
 
   .logo img{
-    margin-left: -29.9vw;
+    margin-left: -44.7vw;
     width: 70px;
-    height: 3vh;
-    margin-top: 1vh;
+    height: 5vh;
+    margin-top: 0.5vh;
   }
   #header.fade-in {
   background-color: black;
