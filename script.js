@@ -73,7 +73,6 @@ function setSelectValue(value) {
 
     for (let i = 0; i < children.length; i++) {
         if (children[i].value == value) {
-            console.log(value, children[i].value)
             children[i].click();
             children[i].selected = true;;
         }
@@ -106,30 +105,58 @@ function initPackageInfo() {
 }
 
 function createInoPackageElement(clickedEvent, parentElement) {
-    console.log(clickedEvent, parentElement)
-    let     
+    if (isInfoDisplayed(parentElement)) return;
+    let
         text = ``,
         element = document.createElement("p");
     switch (clickedEvent.getAttribute("name")) {
         case "premium":
             text = `
                 When purchasing the premium package, We provide 4 logo designs or any other combination of designs (logos, art design, product design...)
-                \n Each design has 2 revision!
-                \n A revision is practically a fixed alignment as for the customer's needs.
+                <br>\n Each design has 2 revision!
+                <br>\n A revision is practically a fixed alignment as for the customer's needs.
                 `
             break;
 
         case "standard":
+            text = `
+            When purchasing the standard package, We provide 2 logo designs or any other combination of designs (logos, art design, product design...)
+            <br>\n Each design has 1 revision!
+            <br>\n A revision is practically a fixed alignment as for the customer's needs.
+            `
             break;
 
         case "basic":
+            text = `
+            When purchasing the basic package, We provide 1 logo design or any other combination of design (logo, art design, product design...)
+            <br>\n this single design will include 1 revision.
+            <br>\n A revision is practically a fixed alignment as for the customer's needs.
+            `
             break;
 
     }
     element.classList.add("package-description");
     element.innerHTML = text;
     parentElement.appendChild(element);
-    console.log(document.getElementsByClassName("package-description")[0]);
+    parentElement.style.width = "35vw"
+    clickedEvent.style.cursor = "not-allowed"
+
+    setTimeout(() => {
+        parentElement.removeChild(element);
+        parentElement.style.width = "300px"
+        clickedEvent.style.cursor = "pointer"
+    }, 8000)
+}
+
+function isInfoDisplayed(parent) {
+    const children = parent.children
+    let isDisplayed = false;
+    for (let child = 0; child < children.length; child++) {
+        if (children[child].tagName.toLowerCase() == "p") {
+            isDisplayed = true;
+        }
+    }
+    return isDisplayed
 }
 
 init();

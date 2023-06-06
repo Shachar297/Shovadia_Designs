@@ -324,7 +324,9 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   padding-top: 2vh;
   padding-bottom: 2vh;
   color: black;
-  border-top: solid black 1px;
+  border-top: solid rgba(0, 0, 0, 0.1) 1px;
+  border-radius: 0.5vh;
+  font-size: 1.2rem;
 }
 
 .package:not(:hover) {
