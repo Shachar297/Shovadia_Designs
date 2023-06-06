@@ -18,7 +18,6 @@ connection.connect(err => {
 })
 
 function execute(sql) {
-    console.log(sql)
     return new Promise((resolve, reject) => {
         connection.query(sql, (err, result) => {
             if (err) {

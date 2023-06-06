@@ -3,11 +3,45 @@
 <head>
     <title>Shovadia Admin Panel</title>
 </head>
+<link rel="stylesheet" href="styles/admin.css">
 <body>
 
     <div class="admin-container">
 
+        <div id="users">
+            <h1>Users</h1> <h4> Total : <label id="totalUsers"></label> </h4> 
+            <table id="users-table">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>User Role</th>
+                        <th>ID</th>
+                        <th>platform</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+<h1>Roles</h1>
+            <table id="roles-table">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Description</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="roles">
+
+        </div>
     </div>
-    <script src="admin.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>

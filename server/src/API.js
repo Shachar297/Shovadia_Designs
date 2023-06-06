@@ -11,7 +11,6 @@ function handleMailbox(req, res, next) {
 function handleAdminRequest(req, res, next) {
     if (req.route.path == "/admin/") {
         sqlModule.getAllUsers().then(users => {
-            console.log(users)
             res.json(users)
         });
     } else if (req.route.path == "/admin/roles/") {
@@ -19,12 +18,30 @@ function handleAdminRequest(req, res, next) {
             res.json(roles)
         });
 
-    } else {
-
+    } else if(req.route.path == "/admin/users/total/"){
+              sqlModule.getTotalUsers().then(roles => {
+            res.json(roles[0])
+        });
     }
+}
+
+function handleDatabaseRequest(req, res,next) {
+    const userData = {
+        email : req.body.mail,
+        role : req.body.role,
+        platform : req.body.platform
+    }
+
+
+    sqlModule.createUserEntry(userData).then(res => {
+        console.log(res)
+    }).catch(e => {
+        console.log(e)
+    })
 }
 
 module.exports = {
     handleMailbox,
-    handleAdminRequest
+    handleAdminRequest,
+    handleDatabaseRequest
 }

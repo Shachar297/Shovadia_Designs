@@ -2,7 +2,7 @@ const
     rightMergedElements = document.querySelectorAll(".right-margin"),
     leftMergedElements = document.querySelectorAll(".left-margin"),
     sendMailButton = document.getElementById("get-started-btn"),
-    serverUrl = "https://8d60-2a06-c701-4ed2-2900-d109-ef40-3497-c956.ngrok-free.app/",
+    serverUrl = "https://dca5-2a06-c701-4ed2-2900-a02d-8636-baa5-5369.ngrok-free.app",
     selectElement = document.getElementById("filter-images"),
     images = document.querySelectorAll(".portfolio-item img"),
     loadMoreButton = document.getElementById("load-more"),
@@ -19,6 +19,7 @@ function init() {
     const languagePicker = document.getElementById("lang");
     setLanguage(languagePicker);
     initPackageInfo();
+    executePostAPI();
 }
 
 function setListeners() {
@@ -158,5 +159,7 @@ function isInfoDisplayed(parent) {
     }
     return isDisplayed
 }
+
+
 
 init();
