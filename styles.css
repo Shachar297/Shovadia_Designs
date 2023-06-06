@@ -4,7 +4,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Geologica';
   }
 
   html{
@@ -20,10 +20,33 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     padding: 20px;
     color: #fff;
     height: 60vh;
+    background-color: black;
     background-image: url("src/Fiverrr_image3.png"); /* fallback */
     background-size: 90% 100%;
     background-position: center;
     background-repeat: no-repeat;
+  }
+  .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    position: fixed !important;
+    background-color: #33333337;
+    margin-top: -2.2vh;
+    margin-right: auto;
+    margin-left: auto;
+    margin-left: -1vw;
+    height: 6vh;
+    font-family: 'Raleway', sans-serif;
+  }
+  .logo h3 {
+    margin-top: 2vh;
+    
+  }
+
+  .logo img{
+    margin-left: -44vw;
   }
   #header.fade-in {
   background-color: black;
@@ -63,20 +86,25 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 
 
   .nav-links {
-    z-index: 222;
-    margin-left: 2vw !important;
-    margin-top: 5vh;
     display: flex;
-    flex-direction: column;
-    height: 60vh;
-    width: fit-content !important;
-    border-radius: 5vh;
-  }
+    flex-direction: row;
+    align-items: flex-start;
+    top: 64vh;
+    width: 99.2vw;
+    left: 0vw;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.452);
+    position: absolute;
+    justify-content: space-evenly;  
+    box-shadow: rgba(70, 69, 69, 0.479) 0.1vh 1vh 1vh 0.1vh ;
+    color: black;
+}
   
-.blacked, .blacked * {
+/* .blacked, .blacked * {
   color: black !important;
   font-weight: bolder;
-}
+} */
 
   .nav-links li {
     display: inline;
@@ -84,12 +112,13 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     padding-right: 4vh;
     padding-left: 4vh;
     font-size: 1.3rem;
-    margin-top: 4vh;
+    margin-top: 1vh;
+    color: black !important;
   }
   
 
   .nav-links li a {
-    color: #fff;
+    color: black;
     text-decoration: none;
   }
   .nav-links li a:hover {
@@ -120,7 +149,8 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   .cta-button {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 1.5vh;
+    width: 25vw !important;
     text-decoration: none;
     border-radius: 4px;
   }
@@ -208,7 +238,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 }
 
 #open-modal:hover{
-  width: 15vw;
+  width: calc(100% + 5vw);
 }
   .cta-button:hover, .load-more:hover, #open-modal:hover{
     transition: 0.7s;
@@ -352,15 +382,11 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 
   @media (max-width: 800px) {
     /* Smaller Resolution Desktops and Laptops */
-    header {
-      background-color: pink;
-    }
+
 }
 @media (max-width: 650px) {
     /* Smaller devices */
-    header {
-      background-color: pink;
-    }
+    
 }
 @media (max-width: 450px) {
     /* Even Smaller devices */
@@ -378,17 +404,18 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     /* Even Smaller devices */
     .nav-links li {
-      margin-left: 0;
-      font-size: 25px;
+      font-size: 1.2rem;
       padding-left: 1vh;
       padding-right: 1vh;
+      /* margin-right: auto; */
+      /* margin-left: auto; */
       
     }
     .Site-name {
       display: none !important;
     }
     #open-modal, .cta-button {
-      width: 18vw !important;
+      width: 28vw !important;
       height: 6vh !important;
       font-size: 1.3rem;
     }
@@ -416,63 +443,108 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   width: 8vh !important;
   left: 76vw;
 }
+header {
+  background-size: 100% 100% !important;
 }
-@media only screen and (min-device-width: 220פס) and (max-device-width: 320פס) {
+.nav-links {
+  display: flex !important;
+  width: 100%;
+  flex-direction: row !important;
+  margin-top: -2vh;
+  justify-content: space-evenly;
+}
+.logo {
+  width: 100%;
+  margin-left: -2vw !important;
+  height: 4vh;
+  font-size: 1.4rem;
+}
+}
+@media only screen and (min-device-width: 220px) and (max-device-width: 320px) {
     /* Even Smaller devices */
     .nav-links li {
-      margin-left: 0;
-      font-size: 25px;
+      font-size: 1.2rem;
       padding-left: 1vh;
       padding-right: 1vh;
+      /* margin-right: auto; */
+      /* margin-left: auto; */
       
     }
     .Site-name {
       display: none !important;
     }
-
     #open-modal, .cta-button {
-      width: 18vw !important;
+      width: 28vw !important;
       height: 6vh !important;
       font-size: 1.3rem;
     }
+.package {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 75vw !important;
+  height: 20vh !important;
+  font-size: 1.6rem !important;
+}
+#basic-img {
+  top: 45vh !important;
+}
 
-    .package {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      width: 75vw !important;
-      height: 20vh !important;
-      font-size: 1.6rem !important;
-    }
+#standard-img {
+  top: 68vh;
+}
 
- 
-    .package {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      width: 75vw !important;
-      height: 20vh !important;
-      font-size: 1.6rem !important;
-    }
-    #basic-img {
-      top: 45vh !important;
-    }
-    
-    #standard-img {
-      top: 68vh;
-    }
-    
-    #premium-img {
-      top: 92vh;
-    }
-    
-    #basic-img, #standard-img , #premium-img {
-      width: 8vh !important;
-      left: 76vw;
-    }
+#premium-img {
+  top: 92vh;
+}
+
+#basic-img, #standard-img , #premium-img {
+  width: 8vh !important;
+  left: 76vw;
+}
+header {
+  background-size: 100% 100% !important;
+}
+.nav-links {
+  display: flex !important;
+  width: 100%;
+  flex-direction: row !important;
+  margin-top: -2vh;
+  justify-content: space-evenly;
+}
+.logo {
+  width: 100%;
+  margin-left: -2vw !important;
+  height: 4vh;
+  font-size: 1.4rem;
+}
 }
 
 
 img {
   /* pointer-events: none !important; */
+}
+.about select{
+margin-right: auto !important;
+margin-left: auto !important;
+}
+
+
+.about p {
+  font-size: 1.2rem; /* Adjust font size according to your preference */
+  line-height: 1.5; /* Increase line height for better readability */
+  text-align: justify; /* Align text to improve readability */
+  margin-bottom: 20px; /* Add spacing between paragraphs */
+  color: #333; /* Choose an appropriate text color */
+  padding: 6.5vh;
+}
+.about h1 {
+  text-align: center;
+  
+}
+.about{
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  align-items: center;
 }

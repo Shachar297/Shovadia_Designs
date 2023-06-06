@@ -10,11 +10,13 @@
 <body>
     <header id="header">
         <nav>
-            <div class="logo">
-                <img src="src/Fiverr_image2.png" alt="Logo Designer" width="75">
+                <div class="logo">
+                    <img src="src/Fiverr_image2.png" alt="Logo Designer" width="75">
+                    <h3>
+                        Shovadia Designs
+                    </h3>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li class="Site-name">Shovadia Designs</li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -38,6 +40,7 @@
         <div class="hero-text">
             <h1>Professional Logo Design Services</h1>
             <p>Get a unique and eye-catching logo for your business</p>
+            <br>
             <a href="https://www.fiverr.com/shachar_297/provide-a-wide-range-of-high-level-designs" target="_blank"
                 class="cta-button" id="get-started-btn">Get Started</a>
             <br>
@@ -45,6 +48,19 @@
 
         </div>
 
+    </section>
+
+    <section class="about">
+        <select name="language" id="lang" onchange="setLanguage(this)">
+            <option value="English" id="default-language" selected>English</option>
+            <option value="Hebrew" selected id="hebrew">Hebrew</option>
+        </select>
+        <h1 id="we-beleive-title"></h1>
+
+        <p class="we-beleive" id="we-beleive-text"></p>
+
+        <h1 id="about-us-title"></h1>
+        <p id="about-us-text"></p>
     </section>
 
 
@@ -172,6 +188,7 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
+    <script src="about.js"></script>
     <script src="header.js"></script>
     <script src="script.js" defer></script>
     <script src="modal.js" defer></script>

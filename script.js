@@ -13,14 +13,10 @@ function init() {
     initMail();
     // setSelectValue("6");
     filterImageResults();
-
-    for(let i = 0; i < allImagesOnPage.length; i ++ ) {
-
-        // allImagesOnPage[i].addEventListener("contextmenu", (e) => {
-        //     e.preventDefault();
-        //     return false;
-        // })
-    }
+    document.getElementById("default-language").click()
+    document.getElementById("lang").selectedIndex = 0;
+    const languagePicker = document.getElementById("lang");
+    setLanguage(languagePicker);
 }
 
 function setListeners() {
@@ -97,4 +93,6 @@ function sendMail(subject = "") {
         body: JSON.stringify({ hasMail: false, mail: "", subject: subject, message: subject })
     })
 }
+
+
 init();
