@@ -114,8 +114,8 @@ function createInoPackageElement(clickedEvent, parentElement) {
         case "premium":
             text = `
                 When purchasing the premium package, We provide 4 logo designs or any other combination of designs (logos, art design, product design...)
-                Each design has 2 revision!
-                A revision is practically a fixed alignment as for the customer's needs.
+                \n Each design has 2 revision!
+                \n A revision is practically a fixed alignment as for the customer's needs.
                 `
             break;
 
