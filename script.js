@@ -10,7 +10,7 @@ const
     packageInfo = document.querySelectorAll(".package-info-svg");
 
 function init() {
-    setListeners();
+    // setListeners();
     initMail();
     // setSelectValue("6");
     filterImageResults();
@@ -25,7 +25,7 @@ function setListeners() {
     rightMergedElements.forEach(element => {
         element.addEventListener('click', (e) => {
             e = e.target;
-            e.style.transform = `scale(2.5, 2.5)`;
+            e.style.transform = `scale(2, 2)`;
             setTimeout(() => {
                 e.style.transform = `scale(1, 1)`;
             }, 3500)
@@ -34,7 +34,7 @@ function setListeners() {
     leftMergedElements.forEach(element => {
         element.addEventListener('click', (e) => {
             e = e.target;
-            e.style.transform = `scale(2.5, 2.5)`;
+            e.style.transform = `scale(2, 2)`;
             setTimeout(() => {
                 e.style.transform = `scale(1, 1)`;
             }, 3500)

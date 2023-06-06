@@ -66,26 +66,26 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   #portfolio img:hover{
     transition: 0.8s;
     transform: scale(1.4,1.4);
-    margin-right: auto;
-    margin-left: auto;
+    /* margin-right: auto;
+    margin-left: auto; */
     cursor: pointer;
-    z-index: 500;
+    /* z-index: 500; */
   }
   
 
   img.right-margin:hover{
-    margin-right: -10vw !important;
+    /* margin-right: -10vw !important; */
     z-index: 0;
 
 }
   img.left-margin:hover{
-    margin-right: 10vw !important;
+    /* margin-right: 10vw !important; */
 
 }
 
-#portfolio img:not(:hover){
+/* #portfolio img:not(:hover){
     transition: 1s;
-  }
+  } */
 
 
   .nav-links {
@@ -200,7 +200,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
   
   .portfolio-item img {
-    width: 400px;
+    width: 350px;
     border-radius: 4px;
     margin-right: 2vw;
     margin-left: 2vw;
