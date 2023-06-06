@@ -11,6 +11,7 @@ function handleMailbox(req, res, next) {
 function handleAdminRequest(req, res, next) {
     if (req.route.path == "/admin/") {
         sqlModule.getAllUsers().then(users => {
+            console.log(users)
             res.json(users)
         });
     } else if (req.route.path == "/admin/roles/") {

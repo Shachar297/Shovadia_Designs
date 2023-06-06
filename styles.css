@@ -540,6 +540,12 @@ margin-left: auto !important;
   margin-bottom: 20px; /* Add spacing between paragraphs */
   color: #333; /* Choose an appropriate text color */
   padding: 6.5vh;
+  
+}
+
+.about {
+  background-color: #f5f5f5;
+  padding-bottom: 2vh;
 }
 .about h1 {
   text-align: center;
